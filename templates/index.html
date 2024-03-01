@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="#"/>
+  <meta charset="UTF-8">
+  <title>D3.js Image Scatterplot</title>
+  <style>
+    /* CSS 样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    svg {
+      border: 2px solid #444;
+    }
+    
+    .tooltip {
+      position: absolute;
+      text-align: center;
+      width: 120px;
+      height: auto;
+      padding: 10px;
+      font-size: 14px;
+      background: #fff;
+      border: 1px solid #aaa;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .preview-image {
+      position: absolute;
+      display: none;
+      width: 50px; /* 调整预览图像大小 */
+      height: 50px;
+      pointer-events: none; /* 禁止预览图像捕获鼠标事件 */
+      border: 2px solid rgb(152, 2, 97);
+      background-color: #fff;
+    }
+    
+    /* 这里放置其它 CSS 样式 */
+  </style>
+  
+</head>
+<body>
+
+<div style="margin-bottom: 20px;">
+  <label for="dataset-select">Select a dataset:</label>
+  <select style="margin-left: 10px;" id="dataset-select">
+    <!-- Options will be added dynamically by JavaScript -->
+  </select>
+  <div id="dataset-info">
+    <!-- Dataset information will be displayed here -->
+  </div>
+  <button id="scale-reset">重置缩放</button>
+  <div style="margin-top: 10px;">
+    <label>
+      是否预览图片:
+      <input type="checkbox" id="preview-image" checked>
+    </label>
+  </div>
+</div>
+
+<!-- 散点图容器 -->
+<div id="scatterplot"></div>
+
+<!-- 图像预览容器 -->
+<img class="preview-image" id="previewImage" src="" alt="Preview Image">
+
+</body>
+
+<!-- 引入 D3.js -->
+<script src="../static/js/d3.v7.min.js", type=""></script>
+<!-- 引入 jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../static/js/vis.js"></script>
+
+<script src="../static/js/main.js"></script>
+
+</html>
